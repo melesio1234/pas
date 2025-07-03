@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pastelería Dulce Encanto</title>
+    <link rel="stylesheet" href="estilos.css">
+  </head> 
+ <body>
+   <header>
+    <h1>Pastelería los 7 hermanos </h1>
+    <p>¡Endulza tu dia con nuestras delicias artesanales!</p>
+   </header>
+     <li>
+           <td><a href="Pasteleria1.html">Inicio</a></td><br>
+    </li>
+    <li>
+      <td><a href="Pagina2.html">Tipos de pasteles</a></td>
+    </li>
+    <section>
+     <h1> Has tu pedido aqui!!!</h1> 
+     <form action="insertar.php" method="get" onsubmit="return validarFormulario()">
+        <label for="NumeroPedido">Numero de pedido</label><br>
+       <input type="text" name="NumeroPedido" id="NumeroPedido"><br><br>
+
+        <label for="Nombre">Nombre</label><br>
+        <input type="text" name="Nombre" id="Nombre"><br><br>
+
+        <label for="TipoPastel">Tipo pastel</label><br>
+       <input type="text" name="TipoPastel" id="TipoPastel"><br><br>
+
+        <label for="Tamaño">Tamaño</label><br>
+       <input type="text" name="Tamaño" id="Tamaño"><br><br>
+
+
+       <label for="numerodetelefono">Numero de telefono</label><br>
+       <input type="text" name="numerodetelefono" id="numerodetelefono"><br><br>
+
+       <label for="FechaDeEntrega">Fecha de entrega</label><br>
+       <input type="date" name="FechaDeEntrega" id="FechaDeEntrega"><br><br>
+
+       <label for="Direccion">Direccion</label><br>
+       <input type="text" name="Direccion" id="Direccion"><br><br>
+
+       <input type="submit" value="Realizar pedido">
+       </form>
+    </section>
+
+     <!-- Formulario para cancelar tu pedido  -->
+  <section>
+    <h2>Cancelar tu pedido</h2>
+    <form action="eliminar.php" method="get" onsubmit="return validarEliminacion()">
+      <label for="NumeroPedidoeliminar">NUMERO DE PEDIDO</label><br>
+      <input type="text" name="NumeroPedido" id="NumeroPedido"><br><br>
+      <input type="submit" value="Eliminar pedido">
+    </form>
+  </section>
+ 
+
+    <footer>
+    <h3> Jesus Melesio Galicia </h3>
+   <p> &copy; 2025 Pastelería los 7 hermanos| Hecho con ♥ en Jiquipico</p>
+  </footer>
+
+  <script>
+    alert("¡¡¡Listo para hacer tu Pedido!!!");
+
+    function validarFormulario() {
+      const campos = ['NumeroPedido', 'Nombre', 'TipoPastel', 'Tamaño', 'numerodetelefono','FechaDeEntrega','Direccion'];
+      for (let id of campos) {
+        const campo = document.getElementById(id);
+        if (!campo.value.trim()) {
+          alert("Por favor llena todos los campos para agendar tu cita.");
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function validarEliminacion() {
+      const NumeroPedido = document.getElementById("NumeroPedido").value.trim();
+      if (!NumeroPedido) {
+        alert("Ingresa tu numero de pedido a eliminar.");
+        return false;
+      }
+      return true;
+    }
+    
