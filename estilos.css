@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  background: #00ccff;
+  color: white;
+}
+
+header {
+  background: #4bdd5e;
+  padding: 2px;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  color:white;
+  padding: 10px;
+  text-align:center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px;
+}
+
+footer {
+  background: #f8b195;
+  text-align: center;
+  padding: .5px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.pastel-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+}
+h1
+{
+   text-align: center;
+}
+
+/* Contenido */
+#contenido {
+    padding: 30px;
+}
+
+/* Formularios */
+form {
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    margin: 30px auto;
+    background
+}
+h2{
+  text-align: center;
+}
